@@ -1,0 +1,1814 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Shell脚本, Aknightive">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Shell脚本 | Aknightive</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aknightive" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Aknightive</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Aknightive</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Shell脚本</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/skills/">
+                                <span class="chip bg-color">skills</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/shell/" class="post-category">
+                                shell
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-08-06
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-03-18
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.6k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Linux-命令行与shell脚本编程大全"><a href="#Linux-命令行与shell脚本编程大全" class="headerlink" title="Linux 命令行与shell脚本编程大全"></a>Linux 命令行与shell脚本编程大全</h1><h2 id="基础命令参考"><a href="#基础命令参考" class="headerlink" title="基础命令参考"></a>基础命令参考</h2><h3 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h3><h4 id="内核的介绍"><a href="#内核的介绍" class="headerlink" title="内核的介绍"></a>内核的介绍</h4><p>内核主要负责以下四种功能:<br> 系统内存管理<br> 软件程序管理<br> 硬件设备管理<br> 文件系统管理</p>
+<p>内核创建了第一个进程(称为init进程)来启动系统上所有其他进程。当内核启动时,它会<br>将init进程加载到虚拟内存中。内核在启动任何其他进程时,都会在虚拟内存中给新进程分配一<br>块专有区域来存储该进程用到的数据和代码。<br>一些Linux发行版使用一个表来管理在系统开机时要自动启动的进程。在Linux系统上,这个<br>表通常位于专门文件/etc/inittab中。</p>
+<p>Linux 操 作 系 统 的 init 系 统 采 用 了 运 行 级 。 运 行 级 决 定 了 init 进 程 运 行 /etc/inittab 文 件 或<br>/etc/rcX.d目录中定义好的某些特定类型的进程。Linux操作系统有5个启动运行级。<br>运行级为1时,只启动基本的系统进程以及一个控制台终端进程。我们称之为单用户模式。<br>单用户模式通常用来在系统有问题时进行紧急的文件系统维护。显然,在这种模式下,仅有一个<br>人(通常是系统管理员)能登录到系统上操作数据。<br>标准的启动运行级是3。在这个运行级上,大多数应用软件,比如网络支持程序,都会启动。<br>另一个Linux中常见的运行级是5。在这个运行级上系统会启动图形化的X Window系统,允许用<br>户通过图形化桌面窗口登录系统。</p>
+<p>在Linux内核中有两种方法用于插入设备驱动代码:<br> 编译进内核的设备驱动代码<br> 可插入内核的设备驱动模块</p>
+<p>Linux系统将硬件设备当成特殊的文件,称为设备文件。设备文件有3种分类:<br> 字符型设备文件<br> 块设备文件<br> 网络设备文件</p>
+<p>Linux为系统上的每个设备都创建一种称为节点的特殊文件。与设备的所有通信都通过设<br>备节点完成。每个节点都有唯一的数值对供Linux内核标识它。数值对包括一个主设备号和一<br>个次设备号。类似的设备被划分到同样的主设备号下。次设备号用于标识主设备组下的某个特<br>定设备。</p>
+<p>Linux内核采用虚拟文件系统(Virtual File System,VFS)作为和每个文件系统交互的接口。<br>这为Linux内核同任何类型文件系统通信提供了一个标准接口。当每个文件系统都被挂载和使用<br>时,VFS将信息都缓存在内存中。</p>
+<h4 id="GUN工具"><a href="#GUN工具" class="headerlink" title="GUN工具"></a>GUN工具</h4><p>GNU项目的主旨在于为Unix系统管理员设计出一套类似于Unix的环境。这个目标促使该项目<br>移植了很多常见的Unix系统命令行工具。供Linux系统使用的这组核心工具被称为coreutils(core<br>utilities)软件包。<br>GNU coreutils软件包由三部分构成:<br> 用以处理文件的工具<br> 用以操作文本的工具<br> 用以管理进程的工具</p>
+<h3 id="走进shell"><a href="#走进shell" class="headerlink" title="走进shell"></a>走进shell</h3><p>tty 代表电传打字机(teletypewriter)。这是一个古老的名词,指<br>的是一台用于发送消息的机器</p>
+<h4 id="流行的图形化终端仿真器软件包"><a href="#流行的图形化终端仿真器软件包" class="headerlink" title="流行的图形化终端仿真器软件包"></a>流行的图形化终端仿真器软件包</h4><p>Eterm <a target="_blank" rel="noopener" href="http://www.eterm.org/">http://www.eterm.org</a><br>Final Term <a target="_blank" rel="noopener" href="http://finalterm.org/">http://finalterm.org</a><br>GNOME Terminal <a target="_blank" rel="noopener" href="https://help.gnome.org/users/gnome-terminal/stable">https://help.gnome.org/users/gnome-terminal/stable</a><br>Guake <a target="_blank" rel="noopener" href="https://github.com/Guake/guake">https://github.com/Guake/guake</a><br>Konsole Terminal <a target="_blank" rel="noopener" href="http://konsole.kde.org/">http://konsole.kde.org</a><br>LillyTerm <a target="_blank" rel="noopener" href="http://lilyterm.luna.com.tw/index.html">http://lilyterm.luna.com.tw/index.html</a><br>LXTerminal <a target="_blank" rel="noopener" href="http://wiki.lxde.org/en/LXTerminal">http://wiki.lxde.org/en/LXTerminal</a><br>mrxvt <a target="_blank" rel="noopener" href="https://code.google.com/p/mrxvt">https://code.google.com/p/mrxvt</a><br>ROXTerm <a target="_blank" rel="noopener" href="http://roxterm.sourceforge.net/">http://roxterm.sourceforge.net</a><br>rxvt <a target="_blank" rel="noopener" href="http://sourceforge.net/projects/rxvt">http://sourceforge.net/projects/rxvt</a><br>rxvt-unicode <a target="_blank" rel="noopener" href="http://software.schmorp.de/pkg/rxvt-unicode">http://software.schmorp.de/pkg/rxvt-unicode</a><br>Sakura <a target="_blank" rel="noopener" href="https://launchpad.net/sakura">https://launchpad.net/sakura</a><br>st <a target="_blank" rel="noopener" href="http://st.suckless.org/">http://st.suckless.org</a><br>Terminator <a target="_blank" rel="noopener" href="https://launchpad.net/terminator">https://launchpad.net/terminator</a><br>Terminology <a target="_blank" rel="noopener" href="http://www.enlightenment.org/p.php?p=about/terminology">http://www.enlightenment.org/p.php?p=about/terminology</a><br>tilda <a target="_blank" rel="noopener" href="http://tilda.sourceforge.net/tildaabout.php">http://tilda.sourceforge.net/tildaabout.php</a><br>UXterm <a target="_blank" rel="noopener" href="http://manpages.ubuntu.com/manpages/gutsy/man1/uxterm.1.html">http://manpages.ubuntu.com/manpages/gutsy/man1/uxterm.1.html</a><br>Wterm <a target="_blank" rel="noopener" href="http://sourceforge.net/projects/wterm">http://sourceforge.net/projects/wterm</a></p>
+<p>xterm <a target="_blank" rel="noopener" href="http://invisible-island.net/xterm">http://invisible-island.net/xterm</a><br>Xfce4 Terminal <a target="_blank" rel="noopener" href="http://docs.xfce.org/apps/terminal/start">http://docs.xfce.org/apps/terminal/start</a><br>Yakuake <a target="_blank" rel="noopener" href="http://extragear.kde.org/apps/yakuake">http://extragear.kde.org/apps/yakuake</a></p>
+<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>常见fhs</p>
+<p>/ 虚拟目录的根目录。通常不会在这里存储文件<br>/bin 二进制目录,存放许多用户级的GNU工具<br>/boot 启动目录,存放启动文件<br>/dev 设备目录,Linux在这里创建设备节点<br>/etc 系统配置文件目录<br>/home 主目录,Linux在这里创建用户目录<br>/lib 库目录,存放系统和应用程序的库文件<br>/media 媒体目录,可移动媒体设备的常用挂载点<br>/mnt 挂载目录,另一个可移动媒体设备的常用挂载点<br>/opt 可选目录,常用于存放第三方软件包和数据文件<br>/proc 进程目录,存放现有硬件及当前进程的相关信息<br>/root root用户的主目录<br>/sbin 系统二进制目录,存放许多GNU管理员级工具<br>/run 运行目录,存放系统运作时的运行时数据<br>/srv 服务目录,存放本地服务的相关文件<br>/sys 系统目录,存放系统硬件信息的相关文件<br>/tmp 临时目录,可以在该目录中创建和删除临时工作文件<br>/usr 用户二进制目录,大量用户级的GNU工具和数据文件都存储在这里<br>/var 可变目录,用以存放经常变化的文件,比如日志文件</p>
+<p>ls常见指令</p>
+<p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">-F 在显示的目录后边添加正斜线表示这是一个目录
+-R 列出当前文件子目录中的文件
+-a
+-R<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>cp 常见</p>
+<p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">-R 递归复制文件夹里的文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>ln</p>
+<p>zsh</p>
+<pre class="line-numbers language-zsh" data-language="zsh"><code class="language-zsh">-s 创建软链接
+不加任何参数 创建硬链接<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>tar</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">参数描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-c</td>
+<td align="left">创建新的档案文件</td>
+</tr>
+<tr>
+<td align="left">-C</td>
+<td align="left">指定到要解压到的目录。注意：该目录必须存在</td>
+</tr>
+<tr>
+<td align="left">-f</td>
+<td align="left">指定打包的文件名。在f之后要立即接打包文件名！不要再加参数！</td>
+</tr>
+<tr>
+<td align="left">-x</td>
+<td align="left">解压</td>
+</tr>
+<tr>
+<td align="left">-O</td>
+<td align="left">将文件解压到标准输出</td>
+</tr>
+<tr>
+<td align="left">-p</td>
+<td align="left">使用原文件的原来属性</td>
+</tr>
+<tr>
+<td align="left">-P</td>
+<td align="left">创建归档文件，使用绝对路径</td>
+</tr>
+<tr>
+<td align="left">-t</td>
+<td align="left">列出档案文件中的内容</td>
+</tr>
+<tr>
+<td align="left">-r</td>
+<td align="left">向压缩归档文件末尾追加文件</td>
+</tr>
+<tr>
+<td align="left">-u</td>
+<td align="left">更新原压缩包中的文件</td>
+</tr>
+<tr>
+<td align="left">-v</td>
+<td align="left">显示详细过程</td>
+</tr>
+<tr>
+<td align="left">-z</td>
+<td align="left">使用gzip压缩，一般格式为xx.tar.gz或xx. tgz</td>
+</tr>
+<tr>
+<td align="left">-Z</td>
+<td align="left">有compress</td>
+</tr>
+<tr>
+<td align="left">-j</td>
+<td align="left">使用bzip2压缩，一般格式为xxx.tar.bz2</td>
+</tr>
+<tr>
+<td align="left">–exclude</td>
+<td align="left">在压缩过程中，排除某个文件（exclude在排除时，需要先写出）</td>
+</tr>
+<tr>
+<td align="left">–remove-files</td>
+<td align="left">在完成打包后，删除原文件夹</td>
+</tr>
+</tbody></table>
+<h3 id="检测程序"><a href="#检测程序" class="headerlink" title="检测程序"></a>检测程序</h3><h4 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h4><p>ps 有好几种风格，我选择Unix风格的</p>
+<p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 常见的</span>
+<span class="token function">ps</span>  查看当前bash的进程
+<span class="token function">ps</span> -ef 列出全部的
+<span class="token function">ps</span> -el列出更为详细的进程信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 参考</span>
+-A 显示所有进程
+-N 显示与指定参数不符的所有进程
+-a 显示除控制进程<span class="token punctuation">(</span>session leader <span class="token punctuation">)</span>和无终端进程外的所有进程
+-d 显示除控制进程外的所有进程
+-e 显示所有进程
+-C cmdlist 显示包含在 cmdlist 列表中的进程
+-G grplist 显示组ID在 grplist 列表中的进程
+-U userlist 显示属主的用户ID在 userlist 列表中的进程
+-g grplist 显示会话或组ID在 grplist 列表中的进程
+-p pidlist 显示PID在 pidlist 列表中的进程
+-s sesslist
+-t ttylist 显示终端ID在 ttylist 列表中的进程
+-u userlist 显示有效用户ID在 userlist 列表中的进程
+-F 显示更多额外输出<span class="token punctuation">(</span>相对 -f 参数而言<span class="token punctuation">)</span>
+-O <span class="token function">format</span> 显示默认的输出列以及 <span class="token function">format</span> 列表指定的特定列
+-M 显示进程的安全信息
+-c 显示进程的额外调度器信息
+-f 显示完整格式的输出
+-j 显示任务信息
+-l 显示长列表
+-o <span class="token function">format</span> 仅显示由 <span class="token function">format</span> 指定的列
+-y 不要显示进程标记<span class="token punctuation">(</span>process flag,表明进程状态的标记<span class="token punctuation">)</span>
+-Z 显示安全标签<span class="token punctuation">(</span>security context<span class="token punctuation">)</span> <span class="token number">1</span> 信息
+-H 用层级格式来显示进程<span class="token punctuation">(</span>树状,用来显示父进程<span class="token punctuation">)</span>
+-n namelist 定义了 WCHAN 列显示的值
+-w 采用宽输出模式,不限宽度显示
+-L 显示进程中的线程
+-V 显示 <span class="token function">ps</span> 命令的版本号
+
+但是仍然还有很多没有列出来<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>相关输出的含义：</p>
+<p><img src="https://typoraup.oss-cn-beijing.aliyuncs.com/img/image-20200718141755982.png" alt="image-20200718141755982"></p>
+<p><strong>image-20200718141755982</strong></p>
+<p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"> F :内核分配给进程的系统标记。
+ S :进程的状态<span class="token punctuation">(</span>O代表正在运行<span class="token punctuation">;</span>S代表在休眠<span class="token punctuation">;</span>R代表可运行,正等待运行<span class="token punctuation">;</span>Z代表僵化,进程已结但父进程已不存在<span class="token punctuation">;</span>T代表停止<span class="token punctuation">)</span>。
+ PRI :进程的优先级<span class="token punctuation">(</span>越大的数字代表越低的优先级<span class="token punctuation">)</span>
+ NI :谦让度值用来参与决定优先级。
+ ADDR :进程的内存地址。
+ SZ :假如进程被换出,所需交换空间的大致大小。
+ WCHAN :进程休眠的内核函数的地址。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://typoraup.oss-cn-beijing.aliyuncs.com/img/image-20200718141931437.png" alt="image-20200718141931437"></p>
+<p><strong>image-20200718141931437</strong></p>
+<p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">C: 进程生命周期中的CPU利用率
+TIME：进程需要的累计CPU时间
+CMD：启动的程序的名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="top"><a href="#top" class="headerlink" title="top"></a>top</h4><p>动态监测进程的一个命令</p>
+<p><img src="https://typoraup.oss-cn-beijing.aliyuncs.com/img/image-20200718143035046.png" alt="image-20200718143035046"></p>
+<p><strong>image-20200718143035046</strong></p>
+<p> VIRT:进程占用的虚拟内存总量。<br> RES:进程占用的物理内存总量。<br> SHR:进程和其他进程共享的内存总量。<br> S:进程的状态(D代表可中断的休眠状态,R代表在运行状态,S代表休眠状态,T代表<br>跟踪状态或停止状态,Z代表僵化状态)</p>
+<h4 id="df"><a href="#df" class="headerlink" title="df"></a>df</h4><p>查看某个设备还有多少空间</p>
+<p>配合lsblk可以更全面了解设备空间占用的情况</p>
+<h4 id="du"><a href="#du" class="headerlink" title="du"></a>du</h4><p>查看某个文件（夹）的大小</p>
+<p>-c 显示总大小</p>
+<h4 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h4><p>排序</p>
+<p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">-b --ignore-leading-blanks 排序时忽略起始的空白
+-C --check<span class="token operator">=</span>quiet 不排序,如果数据无序也不要报告
+-c --check 不排序,但检查输入数据是不是已排序<span class="token punctuation">;</span>未排序的话,报告
+-d --dictionary-order 仅考虑空白和字母,不考虑特殊字符
+-f --ignore-case 默认情况下,会将大写字母排在前面<span class="token punctuation">;</span>这个参数会忽略大小写
+-g --general-number-sort 按通用数值来排序<span class="token punctuation">(</span>跟 -n 不同,把值当浮点数来排序,支持科学
+计数法表示的值<span class="token punctuation">)</span>
+-i --ignore-nonprinting 在排序时忽略不可打印字符
+-k --key<span class="token operator">=</span>POS1<span class="token punctuation">[</span>,POS2<span class="token punctuation">]</span> 排序从POS1位置开始<span class="token punctuation">;</span>如果指定了POS2的话,到POS2位置结
+束
+-M --month-sort 用三字符月份名按月份排序
+-m --merge 将两个已排序数据文件合并
+-n --numeric-sort 按字符串数值来排序<span class="token punctuation">(</span>并不转换为浮点数<span class="token punctuation">)</span>
+-o --output<span class="token operator">=</span>file 将排序结果写出到指定的文件中
+-R --random-sort 按随机生成的散列表的键值排序
+--random-source<span class="token operator">=</span>FILE 指定 -R 参数用到的随机字节的源文件
+-r --reverse 反序排序<span class="token punctuation">(</span>升序变成降序<span class="token punctuation">)</span>
+-S --buffer-size<span class="token operator">=</span>SIZE 指定使用的内存大小
+-s --stable 禁用最后重排序比较
+-T --temporary-directory<span class="token operator">=</span>DIR 指定一个位置来存储临时工作文件
+-t --field-separator<span class="token operator">=</span>SEP 指定一个用来区分键位置的字符
+-u --unique 和 -c 参数一起使用时,检查严格排序<span class="token punctuation">;</span>不和 -c 参数一起用时,仅
+输出第一例相似的两行
+-z --zero-terminated 用NULL字符作为行尾,而不是用换行符<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="压缩与解压"><a href="#压缩与解压" class="headerlink" title="压缩与解压"></a>压缩与解压</h4><p>解压工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">工具</th>
+<th align="left">扩展名</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">bzip2</td>
+<td align="left">.bz2</td>
+<td align="left">采用Burrows-Wheeler块排序文本压缩算法和霍夫曼编码</td>
+</tr>
+<tr>
+<td align="left">compress</td>
+<td align="left">.Z</td>
+<td align="left">最初的Unix文件压缩工具,已经快没人用了</td>
+</tr>
+<tr>
+<td align="left">gzip .gz</td>
+<td align="left">.gz</td>
+<td align="left">GNU压缩工具,用Lempel-Ziv编码</td>
+</tr>
+</tbody></table>
+<p>gzip xx 直接就能解压.gz文件</p>
+<p>tar</p>
+<p>-A –concatenate 将一个已有tar归档文件追加到另一个已有tar归档文件<br>-c –create 创建一个新的tar归档文件<br>-d –diff 检查归档文件和文件系统的不同之处<br>–delete 从已有tar归档文件中删除<br>-r –append 追加文件到已有tar归档文件末尾<br>-t –list 列出已有tar归档文件的内容<br>-u –update 将比tar归档文件中已有的同名文件新的文件追加到该tar归档文件中<br>-x –extract 从已有tar归档文件中提取文</p>
+<p>命令选项</p>
+<table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-C dir</td>
+<td align="left">切换到指定目录</td>
+</tr>
+<tr>
+<td align="left">-f file</td>
+<td align="left">输出结果到file</td>
+</tr>
+<tr>
+<td align="left">-j</td>
+<td align="left">讲输出重定向给bzip2命令来压缩</td>
+</tr>
+<tr>
+<td align="left">-p</td>
+<td align="left">保留所有文件权限</td>
+</tr>
+<tr>
+<td align="left">-v</td>
+<td align="left">在处理文件时显示详细过程</td>
+</tr>
+<tr>
+<td align="left">-z</td>
+<td align="left">将输出重定向给gzip软件压缩</td>
+</tr>
+</tbody></table>
+<p>常用组合：</p>
+<p>tar -zcf xx.tar.gz file1，file2,file3….</p>
+<p>tar -xf xx.tar.gz 解压打包过的并且压缩过的文件</p>
+<h3 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h3><p>/etc/passwd中文件含义</p>
+<p><img src="https://typoraup.oss-cn-beijing.aliyuncs.com/img/image-20200718145559428.png" alt="image-20200718145559428"></p>
+<p><strong>image-20200718145559428</strong></p>
+<p> 登录用户名<br> 用户密码<br> 用户账户的UID(数字形式)<br> 用户账户的组ID(GID)<br> 用户账户的文本描述(称为备注字段)<br> 用户HOME目录的位置<br> 用户的默认shell</p>
+<p>修改这个文件当中的内容十分危险,使用权限管理工具可以安全更改</p>
+<p>密码x因为加密了</p>
+<h4 id="useradd"><a href="#useradd" class="headerlink" title="useradd"></a>useradd</h4><p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">-c comment 给新用户添加备注
+-d home_dir 为主目录指定一个名字<span class="token punctuation">(</span>如果不想用登录名作为主目录名的话<span class="token punctuation">)</span>
+-e expire_date 用YYYY-MM-DD格式指定一个账户过期的日期
+-f inactive_days 指定这个账户密码过期后多少天这个账户被禁用<span class="token punctuation">;</span> <span class="token number">0</span> 表示密码一过期就立即禁用, <span class="token number">1</span> 表示
+禁用这个功能
+-g initial_group 指定用户登录组的GID或组名
+-G group <span class="token punctuation">..</span>. 指定用户除登录组之外所属的一个或多个附加组
+-k 必须和 -m 一起使用,将/etc/skel目录的内容复制到用户的<span class="token environment constant">HOME</span>目录
+-m 创建用户的<span class="token environment constant">HOME</span>目录
+-M 不创建用户的<span class="token environment constant">HOME</span>目录<span class="token punctuation">(</span>当默认设置里要求创建时才使用这个选项<span class="token punctuation">)</span>
+-n 创建一个与用户登录名同名的新组
+-r 创建系统账户
+-p <span class="token function">passwd</span> 为用户账户指定默认密码
+-s shell 指定默认的登录shell
+-u uid 为账户指定唯一的<span class="token environment constant">UID</span>
+
+修改默认值的参数
+-b default_home 更改默认的创建用户<span class="token environment constant">HOME</span>目录的位置
+-e expiration_date 更改默认的新账户的过期日期
+-f inactive 更改默认的新用户从密码过期到账户被禁用的天数
+-g group 更改默认的组名称或GID
+-s shell 更改默认的登录shell<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>一般就是 useradd -m -G wheel horo</p>
+<p>wheel代表在sudo那个文件里取消注释的那个组(加入这个组可以取得root的一些权限) horo就是创建的用户名</p>
+<h4 id="userdel"><a href="#userdel" class="headerlink" title="userdel"></a>userdel</h4><p>userdel -r name 删除账户(但是不会删除太干净)</p>
+<h4 id="usermod"><a href="#usermod" class="headerlink" title="usermod"></a>usermod</h4><p>-l 修改用户账户的登录名。<br>-L 锁定账户,使用户无法登录。<br>-p 修改账户的密码。<br>-U 解除锁定,使用户能够登录。</p>
+<h4 id="修改用户的工具"><a href="#修改用户的工具" class="headerlink" title="修改用户的工具"></a>修改用户的工具</h4><p>usermod 修改用户账户的字段,还可以指定主要组以及附加组的所属关系<br>passwd 修改已有用户的密码<br>chpasswd 从文件中读取登录名密码对,并更新密码<br>chage 修改密码的过期日期<br>chfn 修改用户账户的备注信息<br><strong>chsh</strong> 修改用户账户的默认登录shell</p>
+<h4 id="修改组"><a href="#修改组" class="headerlink" title="修改组"></a>修改组</h4><p>groupadd 命令可在系统上创建新组</p>
+<p><strong>usermod -G shared rich</strong> 讲rich加入到share组中</p>
+<p>group代表修改组</p>
+<h4 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h4><p>chmod　改变文件的权限</p>
+<p>chown 改变文件的所有者 -Ｒ　递归修改</p>
+<p>chgrp　改变文件的组</p>
+<h3 id="文件系统-1"><a href="#文件系统-1" class="headerlink" title="文件系统"></a>文件系统</h3><p>主要就是知道ext系列是经典linux文件系统,新的比较好的有xfs 具体介绍还是去看鸟哥的</p>
+<p>cfdisk 进行分区啥的</p>
+<p>lsblk 列出当前的文件系统</p>
+<p>理解LVM这个概念,简单来说就是linux支持将许多不同的物理磁盘合并为一个分区,这对于扩容来说,就省得备份了.或者是将一个磁盘分割成为许多不同的分区,极大方便了linux文件的管理</p>
+<h2 id="理解shell"><a href="#理解shell" class="headerlink" title="理解shell"></a>理解shell</h2><p>当你登录Linux系统时,bash shell会作为登录shell启动。登录shell会从5个不同的启动文件里<br>读取命令:<br>/etc/profile</p>
+<p>HOME/.bashrc<br>​HOME/.bash_login<br>HOME/.profile<br>/etc/profile文件是系统上默认的bash shell的主启动文件。系统上的每个用户登录时都会执行<br>这个启动文件。</p>
+<hr>
+<p>command1 &amp; 讲命令放到后台执行,但是标准输出仍然会输出到屏幕上</p>
+<p>jobs 列出后台执行的命令</p>
+<p>Ctrl+Z 将一个正在执行的任务放到后台,并休眠</p>
+<p>fg %num 将任务放到前台执行,并唤醒</p>
+<hr>
+<h4 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h4><p>$env 显示变量当中的内容</p>
+<p>export env=xxx 声明这个是全局环境变量,子shell可以使用这个变量,但关机后就会失效</p>
+<p>可以在.zhsrv(shell的配置文件)中声明,来获得持久化的使用 因为每启动一次shell都会source下.zshrc 中的内容</p>
+<h2 id="shell基础语法"><a href="#shell基础语法" class="headerlink" title="shell基础语法"></a>shell基础语法</h2><h3 id="流程控制的语法"><a href="#流程控制的语法" class="headerlink" title="流程控制的语法"></a>流程控制的语法</h3><p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token keyword">if</span> condition
+    <span class="token keyword">then</span> 
+        <span class="token builtin class-name">command</span>
+    <span class="token keyword">else</span>
+        <span class="token builtin class-name">command</span>
+ <span class="token keyword">fi</span>
+
+<span class="token keyword">case</span> var <span class="token keyword">in</span> xxx
+    part1<span class="token punctuation">)</span>
+        <span class="token builtin class-name">command</span>
+    part2<span class="token punctuation">)</span>
+        <span class="token builtin class-name">command</span>
+    *<span class="token punctuation">)</span>
+        <span class="token builtin class-name">command</span>
+<span class="token keyword">esac</span>
+
+<span class="token keyword">while</span> var  <span class="token keyword">in</span> xx,xx,xx,xx,xx<span class="token punctuation">(</span>以字段分割符分割的列表<span class="token punctuation">)</span>
+<span class="token keyword">do</span>
+    <span class="token builtin class-name">command</span>
+<span class="token keyword">done</span>
+
+<span class="token keyword">for</span><span class="token variable"><span class="token punctuation">((</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">))</span></span>
+<span class="token keyword">do</span>
+    <span class="token builtin class-name">command</span>
+<span class="token keyword">done</span>
+
+<span class="token keyword">while</span> condition
+<span class="token keyword">do</span>    
+    <span class="token builtin class-name">command</span>
+<span class="token keyword">done</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://typoraup.oss-cn-beijing.aliyuncs.com/img/image-20200718153735701.png" alt="image-20200718153735701"></p>
+<p><strong>image-20200718153735701</strong></p>
+<p>exit 0</p>
+<p>用$? 可以看出上一条命令的退出码</p>
+<h4 id="条件的设定"><a href="#条件的设定" class="headerlink" title="条件的设定"></a>条件的设定</h4><p>数字 字符串 文件</p>
+<p><img src="https://typoraup.oss-cn-beijing.aliyuncs.com/img/image-20200718154023094.png" alt="image-20200718154023094"></p>
+<p><strong>image-20200718154023094</strong></p>
+<p><img src="https://typoraup.oss-cn-beijing.aliyuncs.com/img/image-20200718154046354.png" alt="image-20200718154046354"></p>
+<p><strong>image-20200718154046354</strong></p>
+<p><img src="https://typoraup.oss-cn-beijing.aliyuncs.com/img/image-20200718154119647.png" alt="image-20200718154119647"></p>
+<p><strong>image-20200718154119647</strong></p>
+<p>以上三中比较都可以用[ ]符号将上述比较方法放在condition中</p>
+<p>(()) 里面的条件可以用高级语言中的比较运算符直接进行比较,对于数字来说</p>
+<p><img src="https://typoraup.oss-cn-beijing.aliyuncs.com/img/image-20200718154330670.png" alt="image-20200718154330670"></p>
+<p><strong>image-20200718154330670</strong></p>
+<p>字符串使用[[]]即可</p>
+<h3 id="处理输入"><a href="#处理输入" class="headerlink" title="处理输入"></a>处理输入</h3><p>getopts 命令能够和已有的shell参数变量配合默契。每次调用它时,它一次只处理命令行上检测到的一个参数。处理完所有的参数后,它会退出并返回一个大于0的退出状态码。这让它非常适合用解析命令行所有参数的循环中。<br>getopts 命令的格式如下:<br>getopts optstring variable<br>optstring 值类似于 getopt 命令中的那个。有效的选项字母都会列在 optstring 中,如果<br>选项字母要求有个参数值,就加一个冒号。要去掉错误消息的话,可以在 optstring 之前加一个<br>冒号。 getopts 命令将当前参数保存在命令行中定义的 variable 中。<br>getopts 命令会用到两个环境变量。如果选项需要跟一个参数值, OPTARG 环境变量就会保<br>存这个值。 OPTIND 环境变量保存了参数列表中 getopts 正在处理的参数位置。这样你就能在处理完选项之后继续处理其他命令行参数了。</p>
+<p>variable 代表正在处理的参数</p>
+<p>OPTARG 参数值</p>
+<p>OPTND 正在处理的位置</p>
+<p>示例:</p>
+<p>shell</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token keyword">while</span> <span class="token builtin class-name">getopts</span> :abc:  opt
+<span class="token keyword">do</span>
+    <span class="token keyword">case</span> <span class="token string">"<span class="token variable">$opt</span>"</span> <span class="token keyword">in</span>
+    a<span class="token punctuation">)</span>echo this is -a
+      <span class="token builtin class-name">echo</span> the postion is <span class="token environment constant">$OPTIND</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    b<span class="token punctuation">)</span>echo this is -b
+      <span class="token builtin class-name">echo</span> the postion is <span class="token environment constant">$OPTIND</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    c<span class="token punctuation">)</span>echo this is -c with part <span class="token variable">$OPTARG</span> 
+      <span class="token builtin class-name">echo</span> the postion is <span class="token environment constant">$OPTIND</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    *<span class="token punctuation">)</span>echo unknown part
+      <span class="token builtin class-name">echo</span> the postion is <span class="token environment constant">$OPTIND</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token keyword">esac</span>
+<span class="token keyword">done</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>使用read即可</p>
+<p>read var1</p>
+<p>-s 输入用密码方式</p>
+<p>-t 超时设置</p>
+<p>-n2 输入两个字母时就会停止读取输入</p>
+<p>$0 代表文件名</p>
+<p>$@ 代表所有参数列表(但是会以空格分隔符分割)</p>
+<p>$#命令行参数的个数</p>
+<p>$* 代表所有参数列表,但是是整个字符串的</p>
+<h3 id="展示输出"><a href="#展示输出" class="headerlink" title="展示输出"></a>展示输出</h3><p>文件描述符:</p>
+<p>0 1 2 3–9</p>
+<p>临时重定向</p>
+<blockquote>
+<p>2&gt; file 将stderror 输入到文件中</p>
+<p>&gt;&amp;2 代表这一条语句向这标准错误输出写入内容</p>
+</blockquote>
+<p>永久重定向</p>
+<blockquote>
+<p>exec 1&gt; file 永久将std 输入到file中</p>
+<p>exec 3&gt;&amp;1 将文件描述符3标记的输出到stdout</p>
+<p>&amp;&gt; file 标准输出和错误输出同时重定向到一个file</p>
+<p>echo xxxx &gt;&amp;3 将xxx输入到文件描述符三定位的地方</p>
+</blockquote>
+<p>一般使用3-6文件描述符的时候都是让他记住一个位置,之后再使用这个位置</p>
+<p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">exec</span> <span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span><span class="token file-descriptor important">&amp;0</span>
+<span class="token builtin class-name">exec</span> <span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>test.log
+
+<span class="token builtin class-name">read</span> var1   这就是直接从teet.log 读取数据了
+<span class="token builtin class-name">exec</span> <span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span><span class="token file-descriptor important">&amp;3</span>   标准输入恢复从键盘输入<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其实都可以理解为: 数据来源&gt;数据写入到哪里</p>
+<p>mkemp.xxxxx 生成随机名称的文件</p>
+<p>注意:当程序在后台进行的时候,stdout和stderror仍然会出现在屏幕上</p>
+<h2 id="创建定时任务"><a href="#创建定时任务" class="headerlink" title="创建定时任务"></a>创建定时任务</h2><p>crontab 的基本格式是：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;分钟&gt; &lt;小时&gt; &lt;日&gt; &lt;月份&gt; &lt;星期&gt; &lt;命令&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><em>分钟</em> 值从 0 到 59.</li>
+<li><em>小时</em> 值从 0 到 23.</li>
+<li><em>日</em> 值从 1 到 31.</li>
+<li><em>月</em> 值从 1 到 12.</li>
+<li><em>星期</em> 值从 0 到 6, 0 代表星期日.</li>
+</ul>
+<p>空格用来分开字段，可以用下面特殊字符设定范围:</p>
+<table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">*****</td>
+<td align="left">通配符，表示所有支持的时间值</td>
+</tr>
+<tr>
+<td align="left"><strong>,</strong></td>
+<td align="left">用逗号分隔多个时间</td>
+</tr>
+<tr>
+<td align="left"><strong>-</strong></td>
+<td align="left">连接两个数值，给出一个范围</td>
+</tr>
+<tr>
+<td align="left"><strong>/</strong></td>
+<td align="left">指定一个周期或频率</td>
+</tr>
+</tbody></table>
+<h2 id="函数的使用"><a href="#函数的使用" class="headerlink" title="函数的使用"></a>函数的使用</h2><pre class="line-numbers language-none"><code class="language-none">name() {
+
+return num(可选的语句,原理等同于 状态退出码)
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>$1 2 3 4 … 表示的是传给他的参数</p>
+<p>name par1 par2 ….</p>
+<p>使用写好的函数库,先提前source下库,然后再调用库里的函数</p>
+<p>接受函数的输出:</p>
+<p> 使用命令转置 var=<code>name</code></p>
+<h2 id="sed和gawk基础"><a href="#sed和gawk基础" class="headerlink" title="sed和gawk基础"></a>sed和gawk基础</h2><p>这都是对流使用的编辑器,经常用于格式化文本或者批量处理某些文本,深入进去又是一门很大的学问,现在暂时用不到,先看看基础</p>
+<p>基本格式：<br>sed ‘数字|/文本/commond/ 其他参数’<br>sed ‘范围 {<br>command1<br>commond2<br>…<br>}</p>
+<p>替换</p>
+<p>sed ‘1,3s/old/new/flag’</p>
+<p>flag:<br>w xx.text<br>g gloable<br>p 原先行的内容要打印出来<br>3 新文本替换第3处的内容</p>
+<p>删除</p>
+<p>sed ‘1,3d’<br>sed ‘1,3/word/d’ 删除有个这个单词的行</p>
+<p>插入</p>
+<p>打印</p>
+<p>p 打印这一行的所有文本<br>‘=’ 打印行号</p>
+<p>从文件读取</p>
+<p>‘r filename’</p>
+<p>向文件写入<br>‘w filename’<br>…….之后的以后有时间用到再更新吧</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Aknightive</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://aknightive.top/2020/08/06/shell-jiao-ben/">https://aknightive.top/2020/08/06/shell-jiao-ben/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Aknightive</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/skills/">
+                                    <span class="chip bg-color">skills</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'Rbz6wDki4DiG0kMGSB0XoVWc-gzGzoHsz',
+        appKey: '2AAevaMtOWbpnkk7FOF3aBJ0',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/08/06/typora-tu-pian-shang-chuan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="typora图片上传">
+                        
+                        <span class="card-title">typora图片上传</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            配置命令行picgo的过程
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-category">
+                                    软件安装
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/skills/">
+                        <span class="chip bg-color">skills</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/08/06/docker-jian-dan-zhi-ling/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="docker简单指令">
+                        
+                        <span class="card-title">docker简单指令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            docker的一些简单指令
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/docker/" class="post-category">
+                                    docker
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/skills/">
+                        <span class="chip bg-color">skills</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0 1 2'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Aknightive</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
