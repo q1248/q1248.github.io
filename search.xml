@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>关于快速重装系统的一些见解</title>
+      <link href="2021/03/20/guan-yu-kuai-su-chong-zhuang-xi-tong-de-yi-xie-jian-jie/"/>
+      <url>2021/03/20/guan-yu-kuai-su-chong-zhuang-xi-tong-de-yi-xie-jian-jie/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>cpp的一些总结</title>
       <link href="2021/02/07/cpp-de-yi-xie-zong-jie/"/>
       <url>2021/02/07/cpp-de-yi-xie-zong-jie/</url>

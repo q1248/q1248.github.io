@@ -6,7 +6,7 @@
   <link href="https://aknightive.top/atom.xml" rel="self"/>
   
   <link href="https://aknightive.top/"/>
-  <updated>2021-03-18T06:33:55.923Z</updated>
+  <updated>2021-03-20T07:07:59.964Z</updated>
   <id>https://aknightive.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于快速重装系统的一些见解</title>
+    <link href="https://aknightive.top/2021/03/20/guan-yu-kuai-su-chong-zhuang-xi-tong-de-yi-xie-jian-jie/"/>
+    <id>https://aknightive.top/2021/03/20/guan-yu-kuai-su-chong-zhuang-xi-tong-de-yi-xie-jian-jie/</id>
+    <published>2021-03-20T07:07:59.000Z</published>
+    <updated>2021-03-20T07:07:59.964Z</updated>
+    
+    <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+        </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>cpp的一些总结</title>
